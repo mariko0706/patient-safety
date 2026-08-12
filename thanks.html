@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>送信が完了しました | 医療安全総研</title>
+<style>
+  :root{
+    --navy:#17284a; --navy-2:#223a66; --teal:#0f7d72; --teal-deep:#0a5f56; --teal-soft:#e2efec;
+    --ground:#f7f8f9; --surface:#ffffff; --ink:#131d2e; --ink-soft:#2c3745; --ink-faint:#525d6e; --line:#d3d9e1;
+    --serif:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP","MS PMincho",serif;
+    --sans:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic","YuGothic","Noto Sans JP",Meiryo,system-ui,sans-serif;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{ --navy:#0f1b33; --teal:#3fb0a2; --teal-deep:#63c9bc; --teal-soft:#12332f;
+      --ground:#0c1524; --surface:#12213a; --ink:#eef2f9; --ink-soft:#c3ccdb; --ink-faint:#93a0b5; --line:#2b3d60; }
+  }
+  *{box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    margin:0; font-family:var(--sans); background:var(--ground); color:var(--ink);
+    display:grid; place-items:center; padding:24px; line-height:1.9;
+    -webkit-font-smoothing:antialiased;
+  }
+  .card{
+    background:var(--surface); border:1px solid var(--line); border-radius:20px;
+    max-width:540px; width:100%; padding:clamp(34px,6vw,56px); text-align:center;
+    box-shadow:0 30px 60px -34px rgba(23,40,74,.4);
+  }
+  .check{
+    width:84px; height:84px; border-radius:50%; margin:0 auto 26px;
+    background:var(--teal-soft); display:grid; place-items:center;
+  }
+  .check svg{ width:44px; height:44px; stroke:var(--teal-deep); }
+  .eyebrow{ font-size:12.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--teal-deep); font-weight:600; margin-bottom:16px; }
+  h1{ font-family:var(--serif); font-weight:600; font-size:clamp(24px,5vw,32px); letter-spacing:.02em; margin:0 0 18px; line-height:1.4; text-wrap:balance; }
+  p{ color:var(--ink-soft); font-size:16.5px; margin:0 0 14px; }
+  p .strong{ color:var(--ink); font-weight:600; }
+  .note{ font-size:14px; color:var(--ink-faint); margin-top:22px; }
+  .btn{
+    display:inline-flex; align-items:center; gap:9px; margin-top:30px;
+    background:var(--navy); color:#fff; text-decoration:none; font-weight:600; font-size:15.5px;
+    padding:14px 30px; border-radius:999px; transition:background .2s, transform .15s;
+  }
+  .btn:hover{ background:var(--navy-2); transform:translateY(-1px); }
+  .brand{ margin-top:32px; font-family:var(--serif); font-size:15px; letter-spacing:.05em; color:var(--ink-faint); }
+  .brand b{ color:var(--teal-deep); font-weight:600; }
+</style>
+</head>
+<body>
+  <main class="card">
+    <div class="check">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+    </div>
+    <div class="eyebrow">Thank you</div>
+    <h1>お問い合わせ、<br>ありがとうございました。</h1>
+    <p>内容を確かに受け付けました。担当者より<span class="strong">1営業日以内にご返信</span>いたします。</p>
+    <p class="note">数日たっても返信が届かない場合は、お手数ですが迷惑メールフォルダをご確認のうえ、再度ご連絡ください。</p>
+    <a class="btn" href="/">トップページへ戻る →</a>
+    <div class="brand">医療安全<b>総研</b></div>
+  </main>
+</body>
+</html>
