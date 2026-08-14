@@ -1,3 +1,5 @@
+<!doctype html>
+<html lang="ja">
 <meta charset="utf-8">
 <title>医療安全総研 | 病院の医療安全に、もう一人の専門家を。</title>
 <meta name="description" content="医療安全総研（株式会社医療安全総研）は、管理者と現場の双方を年間で支える医療安全の伴走支援パートナーです。判断・報告の助言から有事の初動対応、RCA・体制づくりまで、現役の医療安全専門医が実務レベルで支援します。">
@@ -18,9 +20,9 @@
     --ground:   #f7f8f9;
     --surface:  #ffffff;
     --surface-2:#eef1f4;
-    --ink:      #131d2e;
-    --ink-soft: #2c3745;
-    --ink-faint:#525d6e;
+    --ink:      #0f151d;
+    --ink-soft: #161c24;
+    --ink-faint:#3a414c;
     --line:     #d3d9e1;
 
     --focus: var(--teal);
@@ -46,7 +48,7 @@
     --teal:#0f7d72; --teal-deep:#0a5f56; --teal-soft:#e2efec;
     --crimson:#b23b3b; --crimson-soft:#f6e9e6;
     --ground:#f7f8f9; --surface:#ffffff; --surface-2:#eef1f4;
-    --ink:#131d2e; --ink-soft:#2c3745; --ink-faint:#525d6e; --line:#d3d9e1;
+    --ink:#0f151d; --ink-soft:#161c24; --ink-faint:#3a414c; --line:#d3d9e1;
   }
   :root[data-theme="dark"]{
     --navy:#0f1b33; --navy-2:#2c4675; --navy-soft:#1b2b48;
@@ -64,6 +66,10 @@
     margin:0; background:var(--ground); color:var(--ink);
     font-family:var(--sans); font-size:18px; line-height:1.95;
     -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+    /* 日本語：文節単位で改行（lang=ja が必須）。熟語・単語が途中で割れない */
+    word-break: auto-phrase;
+    overflow-wrap: anywhere;
+    line-break: strict;
   }
   .wrap{ max-width:var(--maxw); margin:0 auto; padding-inline:var(--gut); }
   a{ color:var(--teal-deep); text-underline-offset:3px; }
@@ -71,7 +77,7 @@
 
   h1,h2,h3{ text-wrap:balance; }
 
-  /* 日本語の改行を文節単位に：カタカナ語や熟語が途中で割れるのを防ぐ */
+  /* 主要テキストも auto-phrase で統一（文節単位で改行） */
   h1,h2,h3,h4,p,li,
   .lede,.sub,.ptag,.role,.q,.intro,.at,.tt,.msg,.form-note,.eyebrow,
   .co-table .v,.prof-table .v,.g-head p,.notice-body p,.answer p,
@@ -80,7 +86,6 @@
     line-break: strict;
     word-break: auto-phrase;
   }
-  /* auto-phrase 非対応ブラウザ向けの保険：不自然な折り返しを減らす */
   p,li,.lede,.intro,.msg{ text-wrap: pretty; }
 
   /* ── header ── */
@@ -940,9 +945,9 @@
         <div class="r"><div class="k">所在地</div><div class="v">東京都墨田区</div></div>
         <div class="r"><div class="k">資格者</div><div class="v">医師・看護師・弁護士・薬剤師・臨床工学技士・医療安全管理者ほか／各分野の実務専門家がチームを構成</div></div>
         <div class="r"><div class="k">対応エリア</div><div class="v">全国対応（オンライン中心。現地訪問はご契約プランに応じて実施）</div></div>
-        <div class="r"><div class="k">取扱（対象）</div><div class="v">病院・診療所・有床診療所などの医療機関（特定機能病院／一般病院／療養型・ケアミックス等、規模を問わず）。医療安全対策加算の取得・未取得いずれも対応可能。</div></div>
+        <div class="r"><div class="k">対象</div><div class="v">病院・診療所・有床診療所などの医療機関（特定機能病院／一般病院／療養型・ケアミックス等、規模を問わず）。医療安全対策加算の取得・未取得いずれも対応可能。</div></div>
         <div class="r"><div class="k">サービス</div><div class="v">医療安全 年間伴走支援／有事対応支援（オプション）／オンライン講義・責任者交流会／院内事故調査・RCA実務支援／マニュアル整備・院内教育動画作成 ほか</div></div>
-        <div class="r"><div class="k">ホームページ</div><div class="v">https://www.patient-safety.org/</div></div>
+        <div class="r"><div class="k">Web</div><div class="v">https://www.patient-safety.org/</div></div>
         <div class="r"><div class="k">連絡先</div><div class="v"><a href="mailto:ma.7.ri.6.ko@gmail.com" data-email>ma.7.ri.6.ko@gmail.com</a></div></div>
       </div>
     </div>
@@ -957,7 +962,7 @@
           <h2>初回相談は無料です。<br>まずは、お気軽に。</h2>
           <p class="intro">
             院内研修、講演、伴走支援、有事対応、教材づくりなどのご依頼・ご相談を承っています。
-            「話を聞くだけ」でも構いません。右のフォームからお気軽にどうぞ。秘密は厳守します。
+            「話を聞くだけ」でも構いません。下のフォームからお気軽にどうぞ。秘密は厳守します。
           </p>
           <div class="cc-details">
             <div class="cc reveal">
@@ -1111,3 +1116,4 @@
     document.querySelectorAll('.reveal').forEach(function(e){ io.observe(e); });
   })();
 </script>
+</html>
