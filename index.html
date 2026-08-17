@@ -9,6 +9,7 @@
   :root {
     /* brand palette — navy(信頼/管理者) × teal(現場) × crimson(有事) */
     --navy:       #17284a;
+    --logo-mark:  #17284a;
     --navy-2:     #223a66;
     --navy-soft:  #e7ecf4;
     --teal:       #0f7d72;
@@ -36,7 +37,7 @@
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --navy:#0f1b33; --navy-2:#2c4675; --navy-soft:#1b2b48;
+      --navy:#0f1b33; --navy-2:#2c4675; --navy-soft:#1b2b48; --logo-mark:#ffffff;
       --teal:#41b3a5; --teal-deep:#63c9bc; --teal-soft:#12332f;
       --crimson:#d97a72; --crimson-soft:#33201e;
       --ground:#0c1524; --surface:#12213a; --surface-2:#182a48;
@@ -44,14 +45,14 @@
     }
   }
   :root[data-theme="light"]{
-    --navy:#17284a; --navy-2:#223a66; --navy-soft:#e7ecf4;
+    --navy:#17284a; --navy-2:#223a66; --navy-soft:#e7ecf4; --logo-mark:#17284a;
     --teal:#0f7d72; --teal-deep:#0a5f56; --teal-soft:#e2efec;
     --crimson:#b23b3b; --crimson-soft:#f6e9e6;
     --ground:#f7f8f9; --surface:#ffffff; --surface-2:#eef1f4;
     --ink:#0f151d; --ink-soft:#161c24; --ink-faint:#3a414c; --line:#d3d9e1;
   }
   :root[data-theme="dark"]{
-    --navy:#0f1b33; --navy-2:#2c4675; --navy-soft:#1b2b48;
+    --navy:#0f1b33; --navy-2:#2c4675; --navy-soft:#1b2b48; --logo-mark:#ffffff;
     --teal:#41b3a5; --teal-deep:#63c9bc; --teal-soft:#12332f;
     --crimson:#d97a72; --crimson-soft:#33201e;
     --ground:#0c1524; --surface:#12213a; --surface-2:#182a48;
@@ -97,13 +98,9 @@
   }
   .nav{ display:flex; align-items:center; justify-content:space-between; gap:20px; height:66px; }
   .brand{ display:flex; align-items:center; gap:11px; text-decoration:none; color:var(--ink); }
-  .brand .logo{
-    width:34px; height:34px; border-radius:8px; flex:none;
-    background:linear-gradient(145deg, var(--navy), var(--navy-2));
-    display:grid; place-items:center; color:#fff; position:relative;
-  }
-  .brand .logo svg{ width:19px; height:19px; }
-  .brand .logo::after{ content:""; position:absolute; right:-2px; bottom:-2px; width:11px; height:11px; border-radius:50%; background:var(--teal); border:2px solid var(--ground); }
+  .brand .logo{ width:38px; height:38px; flex:none; display:grid; place-items:center; position:relative; }
+  .brand .logo svg{ width:38px; height:38px; display:block; }
+  .brand .logo::after{ display:none; }
   .brand .txt{ display:flex; flex-direction:column; line-height:1.15; }
   .brand .jp{ font-family:var(--serif); font-weight:600; font-size:17.5px; letter-spacing:.06em; }
   .brand .en{ font-size:9px; letter-spacing:.24em; color:var(--ink-faint); text-transform:uppercase; }
@@ -484,7 +481,7 @@
 <header>
   <div class="wrap nav">
     <a class="brand" href="#top" aria-label="医療安全総研 トップへ">
-      <span class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg></span>
+      <span class="logo"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M15.6 3h8.8a2.6 2.6 0 0 1 2.6 2.6V13.4h7.4A2.6 2.6 0 0 1 37 16v8.8a2.6 2.6 0 0 1-2.6 2.6H27v7.0A2.6 2.6 0 0 1 24.4 37h-8.8A2.6 2.6 0 0 1 13 34.4V27.4H5.6A2.6 2.6 0 0 1 3 24.8V16a2.6 2.6 0 0 1 2.6-2.6H13V5.6A2.6 2.6 0 0 1 15.6 3z" fill="var(--logo-mark)"/><circle cx="32.6" cy="7.4" r="4" fill="#e0a92e"/><circle cx="22.8" cy="8.9" r="1.55" fill="var(--ground)"/><circle cx="22.8" cy="14.1" r="1.55" fill="var(--ground)"/></svg></span>
       <span class="txt"><span class="jp">医療安全総研</span><span class="en">Patient Safety Partnership</span></span>
     </a>
     <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="navlinks">
@@ -1070,7 +1067,7 @@
     <div class="foot">
       <div class="lead">
         <a class="brand" href="#top" style="display:inline-flex">
-          <span class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9.5 12l1.8 1.8L15 10"/></svg></span>
+          <span class="logo"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M15.6 3h8.8a2.6 2.6 0 0 1 2.6 2.6V13.4h7.4A2.6 2.6 0 0 1 37 16v8.8a2.6 2.6 0 0 1-2.6 2.6H27v7.0A2.6 2.6 0 0 1 24.4 37h-8.8A2.6 2.6 0 0 1 13 34.4V27.4H5.6A2.6 2.6 0 0 1 3 24.8V16a2.6 2.6 0 0 1 2.6-2.6H13V5.6A2.6 2.6 0 0 1 15.6 3z" fill="var(--logo-mark)"/><circle cx="32.6" cy="7.4" r="4" fill="#e0a92e"/><circle cx="22.8" cy="8.9" r="1.55" fill="var(--ground)"/><circle cx="22.8" cy="14.1" r="1.55" fill="var(--ground)"/></svg></span>
           <span class="txt"><span class="jp">医療安全総研</span><span class="en">Patient Safety Partnership</span></span>
         </a>
         <p>病院の医療安全に、“医師”というもう一人の専門家を。管理者の判断と現場の実務、その双方に、私たちが伴走します。</p>
