@@ -967,7 +967,7 @@
         <div class="r"><div class="k">対象</div><div class="v">病院・診療所・有床診療所などの医療機関（特定機能病院／一般病院／療養型・ケアミックス等、規模を問わず）。医療安全対策加算の取得・未取得いずれも対応可能。</div></div>
         <div class="r"><div class="k">サービス</div><div class="v">医療安全 年間伴走支援／有事対応支援（オプション）／オンライン講義・責任者交流会／院内事故調査・RCA実務支援／マニュアル整備・院内教育動画作成 ほか</div></div>
         <div class="r"><div class="k">Web</div><div class="v">https://www.patient-safety.org/</div></div>
-        <div class="r"><div class="k">連絡先</div><div class="v"><a href="mailto:ma.7.ri.6.ko@gmail.com" data-email>ma.7.ri.6.ko@gmail.com</a></div></div>
+        <div class="r"><div class="k">連絡先</div><div class="v"><a href="mailto:hiramatsu@patient-safety.org" data-email>hiramatsu@patient-safety.org</a></div></div>
       </div>
     </div>
   </section>
@@ -987,7 +987,7 @@
             <div class="cc reveal">
               <div class="field">
                 <div class="lbl">Email</div>
-                <div class="val"><a href="mailto:ma.7.ri.6.ko@gmail.com" data-email>ma.7.ri.6.ko@gmail.com</a></div>
+                <div class="val"><a href="mailto:hiramatsu@patient-safety.org" data-email>hiramatsu@patient-safety.org</a></div>
               </div>
               <div class="field">
                 <div class="lbl">公式サイト</div>
@@ -1117,7 +1117,7 @@
       var orig=btn.innerHTML; btn.disabled=true; btn.textContent='送信中…';
       var payload=Object.fromEntries(new FormData(form).entries());
       try{
-        var res=await fetch('https://formsubmit.co/ajax/ma.7.ri.6.ko@gmail.com',{
+        var res=await fetch('https://formsubmit.co/ajax/hiramatsu@patient-safety.org',{
           method:'POST',
           headers:{'Content-Type':'application/json','Accept':'application/json'},
           body:JSON.stringify(payload)
@@ -1127,7 +1127,7 @@
         else { throw new Error(json.message||'error'); }
       }catch(err){
         btn.disabled=false; btn.innerHTML=orig;
-        alert('申し訳ありません、送信に失敗しました。お手数ですが時間をおいて再度お試しいただくか、メール（ma.7.ri.6.ko@gmail.com）でご連絡ください。');
+        alert('申し訳ありません、送信に失敗しました。お手数ですが時間をおいて再度お試しいただくか、メール（hiramatsu@patient-safety.org）でご連絡ください。');
       }
     });
   })();
